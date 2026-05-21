@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/merchandise", "destination": "/merchandise.html" },
+    { "source": "/community", "destination": "/community.html" },
+    { "source": "/artists/kayson-woods", "destination": "/artists/kayson-woods.html" },
+    { "source": "/artists/kelly-price", "destination": "/artists/kelly-price.html" },
+    { "source": "/artists/jiggy-jamal", "destination": "/artists/jiggy-jamal.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}
