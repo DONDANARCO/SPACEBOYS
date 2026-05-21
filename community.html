@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community — SPACEBOYS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html#about" onclick="closeMobileNav()">About</a>
+  <a href="index.html#artists" onclick="closeMobileNav()">Artists</a>
+  <a href="merchandise.html" onclick="closeMobileNav()">Merch</a>
+  <a href="community.html" onclick="closeMobileNav()">Community</a>
+  <a href="index.html#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">SPACEBOYS</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#artists">Artists</a></li>
+    <li><a href="merchandise.html">Merch</a></li>
+    <li><a href="community.html" class="active">Community</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="index.html#contact" class="btn btn-outline btn-sm">Join List</a>
+    <button class="menu-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content reveal">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Community</p>
+    <div class="section-tag">Fan Community</div>
+    <h1 class="page-hero-title">Our Fans.<br>Our Family.</h1>
+    <p class="page-hero-sub">Moments from tours, events, backstage, and meet &amp; greets — the SPACEBOYS community in real life. Tag us at shows to be featured.</p>
+  </div>
+</section>
+
+<section style="padding-top:60px;">
+  <div class="gallery-tabs reveal">
+    <button class="gallery-tab active" data-gallery="events">Events &amp; Tour</button>
+    <button class="gallery-tab" data-gallery="backstage">Backstage</button>
+    <button class="gallery-tab" data-gallery="meet">Meet &amp; Greet</button>
+    <button class="gallery-tab" data-gallery="guests">Backstage Guests</button>
+  </div>
+
+  <div class="gallery-panel reveal" data-gallery="events">
+    <div class="community-gallery">
+      <div class="gallery-item wide"><span class="gallery-placeholder">Showcase 2024</span><span class="gallery-item-label">SPACEBOYS Showcase — Pretoria</span></div>
+      <div class="gallery-item tall"><span class="gallery-placeholder">Crowd</span><span class="gallery-item-label">Tour Night — Johannesburg</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Stage</span><span class="gallery-item-label">Live Set</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Lights</span><span class="gallery-item-label">Purple Sky Tour</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Venue</span><span class="gallery-item-label">Campus Tour Leg 1</span></div>
+      <div class="gallery-item wide"><span class="gallery-placeholder">Finale</span><span class="gallery-item-label">Full Roster Event</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Afterparty</span><span class="gallery-item-label">Summer Night Set</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Tour Bus</span><span class="gallery-item-label">On The Road</span></div>
+    </div>
+  </div>
+
+  <div class="gallery-panel reveal" data-gallery="backstage" hidden>
+    <div class="community-gallery">
+      <div class="gallery-item"><span class="gallery-placeholder">Studio</span><span class="gallery-item-label">Pre-Show Warm Up</span></div>
+      <div class="gallery-item wide"><span class="gallery-placeholder">Backstage</span><span class="gallery-item-label">SPACEBOYS Studio Session</span></div>
+      <div class="gallery-item tall"><span class="gallery-placeholder">Prep</span><span class="gallery-item-label">Soundcheck</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Crew</span><span class="gallery-item-label">Team Behind The Scenes</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Green Room</span><span class="gallery-item-label">Artist Lounge</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Mic Check</span><span class="gallery-item-label">Last Look Before Stage</span></div>
+    </div>
+  </div>
+
+  <div class="gallery-panel reveal" data-gallery="meet" hidden>
+    <div class="community-gallery">
+      <div class="gallery-item"><span class="gallery-placeholder">Fans</span><span class="gallery-item-label">Meet &amp; Greet Line</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Sign</span><span class="gallery-item-label">Autograph Session</span></div>
+      <div class="gallery-item wide"><span class="gallery-placeholder">Hug</span><span class="gallery-item-label">Fan Moment — Pretoria</span></div>
+      <div class="gallery-item tall"><span class="gallery-placeholder">Photo</span><span class="gallery-item-label">VIP Photo Op</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Merch</span><span class="gallery-item-label">Merch Table Meet Up</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Group</span><span class="gallery-item-label">Community Squad</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Smile</span><span class="gallery-item-label">Post-Show Greet</span></div>
+    </div>
+  </div>
+
+  <div class="gallery-panel reveal" data-gallery="guests" hidden>
+    <div class="community-gallery">
+      <div class="gallery-item wide"><span class="gallery-placeholder">Guest</span><span class="gallery-item-label">Featured Artist Backstage</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Collab</span><span class="gallery-item-label">Studio Guest — Collab Night</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Producer</span><span class="gallery-item-label">In-House Producer Visit</span></div>
+      <div class="gallery-item tall"><span class="gallery-placeholder">Friends</span><span class="gallery-item-label">Friends &amp; Family Night</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">Media</span><span class="gallery-item-label">Press &amp; Media Guests</span></div>
+      <div class="gallery-item"><span class="gallery-placeholder">VIP</span><span class="gallery-item-label">VIP Lounge Guests</span></div>
+    </div>
+  </div>
+
+  <p style="text-align:center;color:var(--gray-dim);font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;margin-top:32px;" class="reveal">
+    Replace placeholders with your event photos in <code style="color:var(--purple);">assets/images/community/</code>
+  </p>
+</section>
+
+<section id="community-cta" style="padding:100px 48px;">
+  <div class="community-content reveal">
+    <h2 class="community-title" style="font-size:clamp(32px,5vw,56px);">Stay In<br><span class="accent">The Loop.</span></h2>
+    <p class="community-sub">Get early access to music, merch drops, event announcements, and exclusive community content.</p>
+    <form class="community-form" onsubmit="handleJoin(event)">
+      <div class="form-row">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center;padding:16px;">Join SPACEBOYS Community →</button>
+    </form>
+    <div class="benefits-row">
+      <div class="benefit-chip">Early Music</div>
+      <div class="benefit-chip">Event Access</div>
+      <div class="benefit-chip">Merch Drops</div>
+      <div class="benefit-chip">Exclusive Photos</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom" style="border:none;padding:48px;">
+    <div class="footer-copy">© 2025 SPACEBOYS</div>
+    <div class="social-row" style="margin-top:0;">
+      <a class="social-btn" href="https://instagram.com/spaceboys" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social-btn" href="https://tiktok.com/@spaceboys" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34v-7.1a8.16 8.16 0 004.77 1.53v-3.38a4.85 4.85 0 01-1-.66z"/></svg></a>
+      <a class="social-btn" href="https://youtube.com/@spaceboys" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<div class="webxbeam-bar">
+  <a href="https://www.webxbeam.co.za" target="_blank" rel="noopener">Powered by&nbsp;<span class="wxb-web">Web</span><span class="wxb-x">X</span><span class="wxb-beam">Beam</span></a>
+</div>
+
+<div class="toast" id="toast">
+  <span class="toast-icon">★</span>
+  <span id="toastMsg">Welcome to SPACEBOYS.</span>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

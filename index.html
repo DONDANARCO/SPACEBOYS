@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPACEBOYS — Float Or Forever Stay Grounded</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html#about" onclick="closeMobileNav()">About</a>
+  <a href="index.html#artists" onclick="closeMobileNav()">Artists</a>
+  <a href="index.html#services" onclick="closeMobileNav()">Studio</a>
+  <a href="index.html#shows" onclick="closeMobileNav()">Shows</a>
+  <a href="merchandise.html" onclick="closeMobileNav()">Merch</a>
+  <a href="community.html" onclick="closeMobileNav()">Community</a>
+  <a href="index.html#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">SPACEBOYS</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#artists">Artists</a></li>
+    <li><a href="#services">Studio</a></li>
+    <li><a href="#distribution">Distribution</a></li>
+    <li><a href="#shows">Shows</a></li>
+    <li><a href="merchandise.html">Merch</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="#services" class="btn btn-outline btn-sm">Book Studio</a>
+    <a href="community.html" class="btn btn-primary btn-sm">Community</a>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMobileNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="ring" style="width:500px;height:500px;right:-100px;top:50%;transform:translateY(-50%);border-color:rgba(151,71,255,0.08);animation:rotateSlow 30s linear infinite;"></div>
+  <div class="ring" style="width:350px;height:350px;right:-30px;top:50%;transform:translateY(-50%);border-color:rgba(151,71,255,0.12);animation:rotateSlow 20s linear infinite reverse;"></div>
+  <div class="ring float-anim" style="width:120px;height:120px;right:200px;top:25%;border-color:rgba(151,71,255,0.25);"></div>
+  <div class="planet float-anim" style="width:24px;height:24px;right:340px;top:30%;background:var(--purple);opacity:0.6;"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span></span> Est. 2019 — Pretoria</div>
+    <h1 class="hero-title">SPACE<span class="hollow">BOYS</span></h1>
+    <p class="hero-subtitle">A Record Label. A Movement. A Creative Universe.<br>Music, culture, fashion &amp; live experiences — all under one platform.</p>
+    <div class="hero-ctas">
+      <a href="#artists" class="btn btn-primary">Meet The Artists</a>
+      <a href="#services" class="btn btn-outline">Book Studio</a>
+      <a href="community.html" class="btn btn-ghost">Join The Community</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+  <div class="hero-motto">Float Or Forever Stay Grounded</div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">Music <span class="dot"></span></div>
+    <div class="marquee-item">Culture <span class="dot"></span></div>
+    <div class="marquee-item">Fashion <span class="dot"></span></div>
+    <div class="marquee-item">Community <span class="dot"></span></div>
+    <div class="marquee-item">Live Events <span class="dot"></span></div>
+    <div class="marquee-item">Artist Development <span class="dot"></span></div>
+    <div class="marquee-item">Creative Freedom <span class="dot"></span></div>
+    <div class="marquee-item">Float Or Forever Stay Grounded <span class="dot"></span></div>
+    <div class="marquee-item">Music <span class="dot"></span></div>
+    <div class="marquee-item">Culture <span class="dot"></span></div>
+    <div class="marquee-item">Fashion <span class="dot"></span></div>
+    <div class="marquee-item">Community <span class="dot"></span></div>
+    <div class="marquee-item">Live Events <span class="dot"></span></div>
+    <div class="marquee-item">Artist Development <span class="dot"></span></div>
+    <div class="marquee-item">Creative Freedom <span class="dot"></span></div>
+    <div class="marquee-item">Float Or Forever Stay Grounded <span class="dot"></span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="reveal">
+    <div class="section-tag">About Us</div>
+    <h2 class="section-title">More Than<br>A Label.</h2>
+    <p class="section-sub">SPACEBOYS is an independent record label and creative platform built around music, culture, and artistic freedom — without restrictive deals.</p>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-dim);max-width:480px;margin-bottom:24px;">We empower artists to record professional music, distribute their work independently, and connect with audiences on their own terms. No cages. No compromise.</p>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-dim);max-width:480px;margin-bottom:40px;">SPACEBOYS also helps artists build hosted artist profiles and portfolios — web-hosted sites that work like personal websites for your music, visuals, and story.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="#artists" class="btn btn-primary">Meet Our Artists</a>
+      <a href="community.html" class="btn btn-ghost">Explore Community</a>
+    </div>
+    <div class="about-stats">
+      <div class="stat-card"><div class="stat-num">2019</div><div class="stat-label">Founded</div></div>
+      <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Signed Artists</div></div>
+      <div class="stat-card"><div class="stat-num">∞</div><div class="stat-label">Creative Freedom</div></div>
+      <div class="stat-card"><div class="stat-num">0</div><div class="stat-label">Restrictive Contracts</div></div>
+    </div>
+  </div>
+  <div class="about-visual reveal">
+    <div class="about-card about-card-main">
+      <div class="planet" style="width:180px;height:180px;top:-40px;right:-40px;background:radial-gradient(circle at 40% 40%, #4a1a8a, #1a0530);opacity:0.7;"></div>
+      <div class="planet float-anim" style="width:60px;height:60px;top:80px;right:60px;background:radial-gradient(circle at 40% 40%, #9747FF, #5b1eac);"></div>
+      <div style="position:absolute;width:240px;height:240px;border-radius:50%;border:1px solid rgba(151,71,255,0.2);top:30px;right:-30px;animation:rotateSlow 15s linear infinite;"></div>
+      <div class="about-card-content">
+        <div class="about-card-label">Artist Portfolios</div>
+        <div class="about-card-name">Your Space Online</div>
+        <div class="about-card-role">Hosted profiles · Bio · Music · Photos · Shows</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="artists">
+  <div class="artists-header reveal">
+    <div>
+      <div class="section-tag">Roster</div>
+      <h2 class="section-title">SPACEBOYS<br>Artists</h2>
+    </div>
+    <div>
+      <p class="section-sub" style="margin-bottom:0;">The official artists signed under the SPACEBOYS records.</p>
+    </div>
+  </div>
+  <div class="carousel-wrapper reveal">
+    <div class="carousel-track" id="carouselTrack">
+
+      <a href="artists/kayson-woods.html" class="artist-card">
+        <div class="artist-card-img">
+          <div class="artist-initial">K</div>
+          <div class="artist-genre-badge">Hip-Hop / Rap</div>
+        </div>
+        <div class="artist-card-body">
+          <div class="artist-name"><span class="artist-name-link">Kayson Woods</span></div>
+          <p class="artist-bio">A contemporary Hip-Hop and Rap artist known for emotionally driven lyrics and atmospheric production — exploring love, ambition, and self-reflection.</p>
+          <span class="btn btn-ghost btn-sm">View Profile →</span>
+        </div>
+      </a>
+
+      <a href="artists/kelly-price.html" class="artist-card">
+        <div class="artist-card-img">
+          <div class="artist-initial">K</div>
+          <div class="artist-genre-badge">Afro / Contemporary</div>
+        </div>
+        <div class="artist-card-body">
+          <div class="artist-name"><span class="artist-name-link">Kelly Price</span></div>
+          <p class="artist-bio">A contemporary African artist with distinctive sound and genre-blending style — rich African influences with modern melodies.</p>
+          <span class="btn btn-ghost btn-sm">View Profile →</span>
+        </div>
+      </a>
+
+      <a href="artists/jiggy-jamal.html" class="artist-card">
+        <div class="artist-card-img">
+          <div class="artist-initial">J</div>
+          <div class="artist-genre-badge">Urban / Rap</div>
+        </div>
+        <div class="artist-card-body">
+          <div class="artist-name"><span class="artist-name-link">Jiggy Jamal</span></div>
+          <p class="artist-bio">Dynamic energy and confident sound — Jiggy Jamal brings originality and presence to every release under SPACEBOYS records.</p>
+          <span class="btn btn-ghost btn-sm">View Profile →</span>
+        </div>
+      </a>
+
+      <div class="artist-card" style="display:flex;align-items:center;justify-content:center;min-height:540px;background:var(--bg);border-style:dashed;cursor:default;">
+        <div style="text-align:center;padding:32px;">
+          <div style="font-size:48px;color:var(--gray-dim);margin-bottom:16px;">+</div>
+          <div class="artist-name" style="color:var(--gray-dim);font-size:16px;">Your Spot</div>
+          <p class="artist-bio" style="margin-top:8px;">We're growing. Submit your music and join SPACEBOYS records.</p>
+          <a href="#contact" class="btn btn-outline btn-sm" style="margin-top:16px;">Submit Music</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="carousel-nav reveal">
+    <button class="carousel-btn" id="prevBtn" aria-label="Previous">←</button>
+    <button class="carousel-btn" id="nextBtn" aria-label="Next">→</button>
+  </div>
+</section>
+
+<div id="services" style="padding:0;">
+  <div class="service-block" data-num="01">
+    <div class="reveal">
+      <div class="section-tag">Studio Services</div>
+      <h2 class="section-title" style="font-size:clamp(28px,4vw,52px);">SPACEBOYS<br>Studio</h2>
+      <p class="section-sub">Professional studio services open to the public. World-class sound, live instruments, and in-house producers ready for your session.</p>
+      <ul class="service-list">
+        <li>Music Production</li>
+        <li>Recording</li>
+        <li>Mixing &amp; Mastering</li>
+        <li>Live Studio Keyboards &amp; Guitars</li>
+        <li>In-House Producers</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Book A Session</a>
+    </div>
+  </div>
+  <div class="service-block" data-num="02">
+    <div class="reveal">
+      <div class="section-tag">Artist Portfolios</div>
+      <h2 class="section-title" style="font-size:clamp(28px,4vw,52px);">Your Artist<br>Website.</h2>
+      <p class="section-sub">SPACEBOYS helps artists create professional profiles and portfolios — fully web-hosted sites for bio, photos, videos, music, and shows.</p>
+      <ul class="service-list">
+        <li>Hosted Artist Pages</li>
+        <li>Bio &amp; Press Kit</li>
+        <li>Photo &amp; Video Galleries</li>
+        <li>Music Previews &amp; Streaming Links</li>
+        <li>Show Listings &amp; Social Links</li>
+      </ul>
+      <a href="#artists" class="btn btn-outline">View Artist Pages</a>
+    </div>
+  </div>
+</div>
+
+<section id="shows">
+  <div class="reveal">
+    <div class="section-tag">Live</div>
+    <h2 class="section-title">Upcoming<br>Shows</h2>
+    <p class="section-sub">Catch SPACEBOYS artists live. Book tickets early — these sell out.</p>
+  </div>
+  <div class="shows-grid reveal">
+    <div class="show-row">
+      <div class="show-date"><span class="month">Jun</span><span class="day">14</span></div>
+      <div class="show-info">
+        <div class="show-title">SPACEBOYS Showcase</div>
+        <div class="show-venue">Pretoria, Gauteng — TBA Venue</div>
+      </div>
+      <div class="show-artist"><a href="artists/kayson-woods.html" style="color:inherit;text-decoration:none;">Kayson Woods</a></div>
+      <div class="show-status">
+        <span class="status-badge upcoming">Upcoming</span>
+        <a href="#contact" class="btn btn-outline btn-sm">Tickets</a>
+      </div>
+    </div>
+    <div class="show-row">
+      <div class="show-date"><span class="month">Jul</span><span class="day">05</span></div>
+      <div class="show-info">
+        <div class="show-title">Summer Night Set</div>
+        <div class="show-venue">Johannesburg, Gauteng — Club TBD</div>
+      </div>
+      <div class="show-artist"><a href="artists/kelly-price.html" style="color:inherit;text-decoration:none;">Kelly Price</a></div>
+      <div class="show-status">
+        <span class="status-badge upcoming">Upcoming</span>
+        <a href="#contact" class="btn btn-outline btn-sm">Tickets</a>
+      </div>
+    </div>
+    <div class="show-row">
+      <div class="show-date"><span class="month">Aug</span><span class="day">22</span></div>
+      <div class="show-info">
+        <div class="show-title">Campus Tour — Leg 1</div>
+        <div class="show-venue">University of Pretoria</div>
+      </div>
+      <div class="show-artist"><a href="artists/jiggy-jamal.html" style="color:inherit;text-decoration:none;">Jiggy Jamal</a></div>
+      <div class="show-status">
+        <span class="status-badge soon">Coming Soon</span>
+        <a href="community.html" class="btn btn-ghost btn-sm">Notify Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="distribution">
+  <div class="reveal">
+    <div class="section-tag">Distribution</div>
+    <h2 class="section-title">Get Your<br>Music Out.</h2>
+    <p class="section-sub">We assist unsigned artists with getting their music distributed across all major streaming platforms — on your terms.</p>
+    <div class="dist-features">
+      <div class="dist-feature">
+        <div class="dist-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>
+        <div class="dist-feature-text"><strong>You Keep Your Rights</strong><span>No ownership taken. Your music stays yours, always.</span></div>
+      </div>
+      <div class="dist-feature">
+        <div class="dist-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg></div>
+        <div class="dist-feature-text"><strong>No Restrictive Deals</strong><span>Creative freedom, not contractual cages.</span></div>
+      </div>
+      <div class="dist-feature">
+        <div class="dist-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></div>
+        <div class="dist-feature-text"><strong>Full Streaming Setup</strong><span>Spotify, Apple Music, Tidal, Amazon, YouTube — all covered.</span></div>
+      </div>
+    </div>
+    <a href="#contact" class="btn btn-primary">Submit Your Music</a>
+  </div>
+  <div class="dist-visual reveal">
+    <div class="dist-card">
+      <div class="dist-card-title">Your Music,<br>Everywhere.</div>
+      <div class="dist-card-sub">Your sound on every major platform — while you keep 100% of your rights.</div>
+      <div class="platforms">
+        <div class="platform-chip">Spotify</div>
+        <div class="platform-chip">Apple Music</div>
+        <div class="platform-chip">Tidal</div>
+        <div class="platform-chip">YouTube</div>
+        <div class="platform-chip">+ More</div>
+      </div>
+      <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Your Music →</a>
+    </div>
+  </div>
+</section>
+
+<section id="merch">
+  <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;">
+    <div>
+      <div class="section-tag">Merchandise</div>
+      <h2 class="section-title">SPACEBOYS<br>Gear.</h2>
+    </div>
+    <div>
+      <p style="font-size:14px;color:var(--text-dim);max-width:320px;margin-bottom:20px;">Wear the movement. Limited drops, exclusive collections, and artist collaborations.</p>
+      <a href="merchandise.html" class="btn btn-outline">Shop All</a>
+    </div>
+  </div>
+  <div class="merch-grid reveal">
+    <a href="merchandise.html" class="merch-card">
+      <div class="merch-img"><span class="merch-img-label">HOODIE</span><span class="merch-badge">New</span></div>
+      <div class="merch-body">
+        <div class="merch-name">SPACEBOYS Hoodie</div>
+        <div class="merch-type">Hoodies</div>
+        <div class="merch-footer"><div class="merch-price">R 750</div></div>
+      </div>
+    </a>
+    <a href="merchandise.html" class="merch-card">
+      <div class="merch-img"><span class="merch-img-label">TEE</span></div>
+      <div class="merch-body">
+        <div class="merch-name">Classic Tee</div>
+        <div class="merch-type">T-Shirts</div>
+        <div class="merch-footer"><div class="merch-price">R 350</div></div>
+      </div>
+    </a>
+    <a href="merchandise.html" class="merch-card">
+      <div class="merch-img"><span class="merch-img-label">CAP</span><span class="merch-badge">Limited</span></div>
+      <div class="merch-body">
+        <div class="merch-name">SPCBYS Cap</div>
+        <div class="merch-type">Hats</div>
+        <div class="merch-footer"><div class="merch-price">R 280</div></div>
+      </div>
+    </a>
+    <a href="merchandise.html" class="merch-card">
+      <div class="merch-img"><span class="merch-img-label">PACK</span><span class="merch-badge">Drop</span></div>
+      <div class="merch-body">
+        <div class="merch-name">Accessories Pack</div>
+        <div class="merch-type">Accessories</div>
+        <div class="merch-footer"><div class="merch-price">R 420</div></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="featured">
+  <div class="featured-header reveal">
+    <div class="section-tag">Collaborations</div>
+    <h2 class="section-title">Featured<br>Artists</h2>
+    <p class="section-sub">Artists outside of SPACEBOYS who have collaborated or featured on songs.</p>
+  </div>
+  <div class="featured-carousel reveal">
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="featuredTrack">
+
+        <div class="featured-card">
+          <div class="featured-card-top">
+            <div class="featured-artist-photo">N</div>
+            <div class="featured-meta">
+              <div class="featured-artist-name">Naledi M.</div>
+              <div class="featured-collab">feat. on Midnight Orbit</div>
+            </div>
+          </div>
+          <div class="featured-song-block">
+            <div class="featured-artwork">♪</div>
+            <div>
+              <div class="featured-song-title">Midnight Orbit</div>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="featured-stream">Stream on Spotify →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <div class="featured-card-top">
+            <div class="featured-artist-photo">T</div>
+            <div class="featured-meta">
+              <div class="featured-artist-name">Thabo K.</div>
+              <div class="featured-collab">feat. on Grounded High</div>
+            </div>
+          </div>
+          <div class="featured-song-block">
+            <div class="featured-artwork">♪</div>
+            <div>
+              <div class="featured-song-title">Grounded High</div>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="featured-stream">Stream on Spotify →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <div class="featured-card-top">
+            <div class="featured-artist-photo">Z</div>
+            <div class="featured-meta">
+              <div class="featured-artist-name">Zara L.</div>
+              <div class="featured-collab">feat. on Purple Sky</div>
+            </div>
+          </div>
+          <div class="featured-song-block">
+            <div class="featured-artwork">♪</div>
+            <div>
+              <div class="featured-song-title">Purple Sky</div>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="featured-stream">Stream on Apple Music →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <div class="featured-card-top">
+            <div class="featured-artist-photo">D</div>
+            <div class="featured-meta">
+              <div class="featured-artist-name">Dee Vee</div>
+              <div class="featured-collab">feat. on Float Mode</div>
+            </div>
+          </div>
+          <div class="featured-song-block">
+            <div class="featured-artwork">♪</div>
+            <div>
+              <div class="featured-song-title">Float Mode</div>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="featured-stream">Stream on Spotify →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="featuredPrev" aria-label="Previous featured">←</button>
+      <button class="carousel-btn" id="featuredNext" aria-label="Next featured">→</button>
+    </div>
+  </div>
+</section>
+
+<section id="community-cta">
+  <div class="community-content reveal">
+    <div class="section-tag center">Fan Community</div>
+    <h2 class="community-title">Our Fans.<br><span class="accent">Our Family.</span></h2>
+    <p class="community-sub">Tour photos, backstage moments, meet &amp; greets, and everything in between — see what the SPACEBOYS community looks like in real life.</p>
+    <a href="community.html" class="btn btn-primary">Explore Community Gallery</a>
+    <div class="benefits-row" style="margin-top:32px;">
+      <div class="benefit-chip">Event Photos</div>
+      <div class="benefit-chip">Tour Moments</div>
+      <div class="benefit-chip">Backstage</div>
+      <div class="benefit-chip">Meet &amp; Greet</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="reveal">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Let's Build<br>Together.</h2>
+    <p class="section-sub">Book an artist, record a session, build your portfolio, or collaborate — we're listening.</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg></div>
+        <div>
+          <div class="contact-item-label">Artist Bookings</div>
+          <div class="contact-item-value">Book SPACEBOYS artists for performances, festivals, campus tours, and brand activations.</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div>
+          <div class="contact-item-label">Studio Sessions</div>
+          <div class="contact-item-value">Recording, production, mixing &amp; mastering. Open to all artists.</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg></div>
+        <div>
+          <div class="contact-item-label">General Inquiries</div>
+          <div class="contact-item-value">spaceboys@label.co.za</div>
+        </div>
+      </div>
+    </div>
+    <div class="social-row">
+      <a class="social-btn" href="https://instagram.com/spaceboys" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social-btn" href="https://tiktok.com/@spaceboys" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34v-7.1a8.16 8.16 0 004.77 1.53v-3.38a4.85 4.85 0 01-1-.66z"/></svg></a>
+      <a class="social-btn" href="https://youtube.com/@spaceboys" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+      <a class="social-btn" href="https://open.spotify.com" target="_blank" rel="noopener" title="Spotify" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>
+      <a class="social-btn" href="https://music.apple.com" target="_blank" rel="noopener" title="Apple Music" aria-label="Apple Music"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15H5.986c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208A4.86 4.86 0 00.09 4.625C.01 5.18 0 5.74 0 6.3v11.38c.01.55.05 1.11.15 1.66.31 1.36 1.06 2.37 2.18 3.07.5.32 1.05.54 1.64.67.63.13 1.28.17 1.92.17h11.48c.62 0 1.27-.04 1.89-.19a5.09 5.09 0 001.89-.88c.96-.7 1.56-1.65 1.87-2.77.15-.56.21-1.12.22-1.7V6.12zM9.94 17.84c-2.6 0-4.71-2.12-4.71-4.72 0-2.6 2.11-4.72 4.71-4.72s4.71 2.12 4.71 4.72c0 2.61-2.11 4.72-4.71 4.72zm6.28-8.51a1.06 1.06 0 110-2.12 1.06 1.06 0 010 2.12z"/></svg></a>
+    </div>
+  </div>
+  <div class="reveal">
+    <div class="section-tag">Send A Message</div>
+    <form class="contact-form" onsubmit="handleContact(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <select>
+        <option value="" disabled selected>Subject / Inquiry Type</option>
+        <option>Artist Booking</option>
+        <option>Studio Session</option>
+        <option>Artist Portfolio</option>
+        <option>Distribution Services</option>
+        <option>Merchandise</option>
+        <option>General Inquiry</option>
+      </select>
+      <textarea placeholder="Tell us more about your inquiry..." rows="5"></textarea>
+      <button type="submit" class="btn btn-primary" style="justify-content:center;padding:16px;">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">SPACEBOYS</div>
+      <p>A Record Label. A Movement. A Creative Universe. Est. 2019 — Pretoria, South Africa.</p>
+      <div class="social-row" style="margin-top:0;">
+        <a class="social-btn" href="https://instagram.com/spaceboys" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social-btn" href="https://tiktok.com/@spaceboys" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34v-7.1a8.16 8.16 0 004.77 1.53v-3.38a4.85 4.85 0 01-1-.66z"/></svg></a>
+        <a class="social-btn" href="https://youtube.com/@spaceboys" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+        <a class="social-btn" href="https://open.spotify.com" target="_blank" rel="noopener" title="Spotify" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#artists">Artists</a></li>
+        <li><a href="#services">Studio</a></li>
+        <li><a href="merchandise.html">Merchandise</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#distribution">Distribution</a></li>
+        <li><a href="#contact">Artist Bookings</a></li>
+        <li><a href="#services">Artist Portfolios</a></li>
+        <li><a href="#contact">Submit Music</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 SPACEBOYS. All rights reserved.</div>
+    <div class="footer-motto">Float Or Forever <span>Stay Grounded.</span></div>
+  </div>
+</footer>
+
+<div class="webxbeam-bar">
+  <a href="https://www.webxbeam.co.za" target="_blank" rel="noopener">
+    Powered by&nbsp;<span class="wxb-web">Web</span><span class="wxb-x">X</span><span class="wxb-beam">Beam</span>
+  </a>
+</div>
+
+<div class="toast" id="toast">
+  <span class="toast-icon">★</span>
+  <span id="toastMsg">Welcome to SPACEBOYS.</span>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
