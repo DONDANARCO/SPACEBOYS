@@ -388,6 +388,25 @@ section { padding: 120px 48px; }
   justify-content: center;
   overflow: hidden;
 }
+.artist-card-img img,
+.artist-hero-photo img,
+.photo-cell img,
+.gallery-item img,
+.about-card-logo img,
+.merch-img img,
+.featured-artist-photo img,
+.featured-artwork img,
+.music-artwork img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.artist-card-img img,
+.about-card-logo img {
+  position: absolute;
+  inset: 0;
+}
 .artist-card-img .artist-initial {
   font-family: var(--font-display);
   font-weight: 800;
@@ -395,7 +414,10 @@ section { padding: 120px 48px; }
   color: rgba(151,71,255,0.15);
   line-height: 1;
   user-select: none;
+  position: relative;
+  z-index: 1;
 }
+.artist-card-img:has(img) .artist-initial { display: none; }
 .artist-card-img::after {
   content: '';
   position: absolute;
@@ -937,6 +959,26 @@ footer { border-top: 1px solid var(--border); padding: 60px 48px 40px; backgroun
   font-weight: 800;
   font-size: 96px;
   color: rgba(151,71,255,0.25);
+  overflow: hidden;
+}
+.artist-hero-photo:has(img) { font-size: 0; }
+.about-card-main .about-card-logo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  opacity: 0.95;
+}
+.about-card-main .about-card-logo img {
+  position: relative;
+  inset: auto;
+  max-width: 280px;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 .artist-hero-info { position: relative; z-index: 2; padding-bottom: 24px; }
 .artist-hero-genre {
@@ -974,6 +1016,7 @@ footer { border-top: 1px solid var(--border); padding: 60px 48px 40px; backgroun
   border: 1px solid var(--border);
   overflow: hidden;
   transition: border-color 0.2s;
+  position: relative;
 }
 .photo-cell:hover { border-color: var(--border-purple); }
 .photo-cell.large { grid-column: span 2; grid-row: span 2; }
@@ -1110,6 +1153,7 @@ footer { border-top: 1px solid var(--border); padding: 60px 48px 40px; backgroun
   text-transform: uppercase;
   color: var(--silver);
 }
+.gallery-item img { position: absolute; inset: 0; }
 .gallery-placeholder {
   position: absolute;
   inset: 0;
@@ -1122,6 +1166,11 @@ footer { border-top: 1px solid var(--border); padding: 60px 48px 40px; backgroun
   text-transform: uppercase;
   color: var(--gray-dim);
 }
+.gallery-item:has(img) .gallery-placeholder { display: none; }
+.merch-img img { position: absolute; inset: 0; z-index: 0; }
+.merch-img:has(img) .merch-img-label { display: none; }
+.featured-artwork { overflow: hidden; }
+.featured-artist-photo { overflow: hidden; }
 
 /* Merchandise page */
 .merch-page-grid {
@@ -1145,7 +1194,17 @@ footer { border-top: 1px solid var(--border); padding: 60px 48px 40px; backgroun
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
+.merch-page-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.merch-page-img:has(img) .merch-img-label { display: none; }
 .merch-page-body { padding: 24px; }
 .merch-page-name { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--white); margin-bottom: 8px; }
 .merch-page-desc { font-size: 13px; color: var(--text-dim); line-height: 1.6; margin-bottom: 20px; }
