@@ -122,6 +122,28 @@ function initGalleryTabs() {
 }
 
 initGalleryTabs();
+initPartnerTabs();
+
+function initPartnerTabs() {
+  const tabs = document.querySelectorAll('.partner-tab');
+  const panels = document.querySelectorAll('.partner-panel');
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.partner;
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      panels.forEach(p => {
+        p.hidden = p.dataset.partner !== target;
+      });
+    });
+  });
+}
 
 // Nav highlight on homepage
 if (document.querySelector('.nav-links')) {
