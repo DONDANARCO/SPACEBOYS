@@ -1,6 +1,5 @@
-import { randomUUID } from "crypto";
 import { PutCommand } from "@aws-sdk/lib-dynamodb";
-import { docClient, getTableName } from "../lib/db.js";
+import { buildItem, docClient, getTableName } from "../lib/db.js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -17,13 +16,10 @@ export default async function handler(req, res) {
     await docClient.send(
       new PutCommand({
         TableName: getTableName(),
-        Item: {
-          id: randomUUID(),
-          type: "subscriber",
+        Item: buildItem("subscriber", {
           name: name.trim(),
           email: email.trim(),
-          createdAt: new Date().toISOString(),
-        },
+        }),
       })
     );
 

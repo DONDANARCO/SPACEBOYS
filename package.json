@@ -2,9 +2,18 @@
   "name": "spaceboys",
   "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "dev:static": "npx --yes serve . -l 3000",
+    "build": "echo \"Static site — deploy with Vercel\"",
+    "postinstall": "echo \"Dependencies ready. Run npm run dev (requires vercel login).\""
+  },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.758.0",
-    "@aws-sdk/lib-dynamodb": "^3.758.0",
-    "@vercel/functions": "^2.0.0"
+    "@aws-sdk/client-dynamodb": "^3.1051.0",
+    "@aws-sdk/lib-dynamodb": "^3.1051.0",
+    "@vercel/functions": "^2.2.13"
+  },
+  "devDependencies": {
+    "vercel": "^48.0.0"
   }
 }
