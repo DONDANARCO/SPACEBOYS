@@ -86,7 +86,9 @@ function initManualCarousel(trackId, prevId, nextId) {
 initAutoCarousel('carouselTrack', { intervalMs: 4000, selector: '.artist-card' });
 initManualCarousel('carouselTrack', 'prevBtn', 'nextBtn');
 initAutoCarousel('partnersTrack', { intervalMs: 3500, selector: '.partner-slide' });
-initAutoCarousel('featuredTrack', { intervalMs: 5000, selector: '.featured-card' });
+if (document.getElementById('featuredTrack')) {
+  initAutoCarousel('featuredTrack', { intervalMs: 5000, selector: '.featured-card' });
+}
 
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
