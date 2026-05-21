@@ -48,16 +48,51 @@ function showToast(msg) {
   setTimeout(() => toast.classList.remove('show'), 3500);
 }
 
-function handleJoin(e) {
-  e.preventDefault();
-  showToast('★ Welcome to the SPACEBOYS community!');
-  e.target.reset();
+async function postJson(url, data) {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.error || 'Request failed');
+  }
+  return res.json();
 }
 
-function handleContact(e) {
+async function handleJoin(e) {
   e.preventDefault();
-  showToast('Message sent. We\'ll be in touch.');
-  e.target.reset();
+  const form = e.target;
+  const name = form.querySelector('[name="name"]')?.value?.trim();
+  const email = form.querySelector('[name="email"]')?.value?.trim();
+  if (!name || !email) return;
+
+  try {
+    await postJson('/api/subscribe', { name, email });
+    showToast('★ Welcome to the SPACEBOYS community!');
+    form.reset();
+  } catch {
+    showToast('Could not join right now. Please try again.');
+  }
+}
+
+async function handleContact(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.querySelector('[name="name"]')?.value?.trim();
+  const email = form.querySelector('[name="email"]')?.value?.trim();
+  const subject = form.querySelector('[name="subject"]')?.value?.trim();
+  const message = form.querySelector('[name="message"]')?.value?.trim();
+  if (!name || !email) return;
+
+  try {
+    await postJson('/api/contact', { name, email, subject, message });
+    showToast('Message sent. We\'ll be in touch.');
+    form.reset();
+  } catch {
+    showToast('Could not send message. Please try again.');
+  }
 }
 
 // Mobile nav

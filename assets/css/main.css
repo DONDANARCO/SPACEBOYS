@@ -356,6 +356,21 @@ section { padding: 120px 48px; }
 
 #artists { background: var(--surface); }
 .artists-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
+.artists-roster-photo {
+  margin-bottom: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-purple);
+  aspect-ratio: 21 / 9;
+  max-height: 420px;
+}
+.artists-roster-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
 .carousel-wrapper { overflow: hidden; position: relative; }
 .carousel-wrapper::after {
   content: '';

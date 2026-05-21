@@ -1,0 +1,10 @@
+{
+  "name": "spaceboys",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.758.0",
+    "@aws-sdk/lib-dynamodb": "^3.758.0",
+    "@vercel/functions": "^2.0.0"
+  }
+}
