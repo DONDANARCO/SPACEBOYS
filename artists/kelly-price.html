@@ -66,14 +66,14 @@
 <section class="artist-section" id="photos" style="background:var(--surface);">
   <div class="artist-section-header reveal"><div class="section-tag">Photos</div><h2 class="section-title" style="font-size:clamp(28px,4vw,48px);">Gallery</h2></div>
   <div class="photo-grid reveal">
-    <div class="photo-cell large">
+    <button type="button" class="photo-cell large" data-lightbox="kelly-photos">
       <img src="../assets/images/Kelly%20Price/Kelly%20price%20headshot.jpeg" alt="Kelly Price">
-    </div>
-    <div class="photo-cell"><img src="../assets/images/Kelly%20Price/Kelly%20price.jpeg" alt="Kelly Price"></div>
-    <div class="photo-cell"><img src="../assets/images/Kelly%20Price/Kelly%20price%201.jpeg" alt="Kelly Price"></div>
-    <div class="photo-cell"><img src="../assets/images/Kelly%20Price/Kelly%20price%202.jpeg" alt="Kelly Price"></div>
-    <div class="photo-cell"><img src="../assets/images/Kelly%20Price/Kelly%20price%203.jpeg" alt="Kelly Price"></div>
-    <div class="photo-cell"><img src="../assets/images/Kelly%20Price/Kelly%20price%20in%20studio.jpeg" alt="Kelly Price in studio"></div>
+    </button>
+    <button type="button" class="photo-cell" data-lightbox="kelly-photos"><img src="../assets/images/Kelly%20Price/Kelly%20price.jpeg" alt="Kelly Price"></button>
+    <button type="button" class="photo-cell" data-lightbox="kelly-photos"><img src="../assets/images/Kelly%20Price/Kelly%20price%201.jpeg" alt="Kelly Price"></button>
+    <button type="button" class="photo-cell" data-lightbox="kelly-photos"><img src="../assets/images/Kelly%20Price/Kelly%20price%202.jpeg" alt="Kelly Price"></button>
+    <button type="button" class="photo-cell" data-lightbox="kelly-photos"><img src="../assets/images/Kelly%20Price/Kelly%20price%203.jpeg" alt="Kelly Price"></button>
+    <button type="button" class="photo-cell" data-lightbox="kelly-photos"><img src="../assets/images/Kelly%20Price/Kelly%20price%20in%20studio.jpeg" alt="Kelly Price in studio"></button>
   </div>
 </section>
 
@@ -119,10 +119,25 @@
 <section class="artist-section" id="shows">
   <div class="artist-section-header reveal"><div class="section-tag">Live</div><h2 class="section-title" style="font-size:clamp(28px,4vw,48px);">Shows</h2></div>
   <div class="shows-grid reveal">
-    <div class="show-row">
-      <div class="show-date"><span class="month">Jul</span><span class="day">05</span></div>
-      <div class="show-info"><div class="show-title">Summer Night Set</div><div class="show-venue">Johannesburg, Gauteng</div></div>
-      <div class="show-status"><span class="status-badge upcoming">Upcoming</span><a href="../index.html#contact" class="btn btn-outline btn-sm">Tickets</a></div>
+    <div class="show-row show-row--featured">
+      <div class="show-date"><span class="month">Jun</span><span class="day">20</span><span class="show-year">2026</span></div>
+      <div class="show-info">
+        <div class="show-title">Introduction to Space Fest</div>
+        <div class="show-venue">Venue TBA · Pretoria, Gauteng</div>
+        <div class="show-artist show-artist--roster">Full SPACEBOYS artist roster</div>
+      </div>
+      <div class="show-status">
+        <span class="status-badge upcoming">Upcoming</span>
+        <a href="../index.html?rsvp=1#shows" class="btn btn-primary btn-sm">RSVP</a>
+      </div>
+    </div>
+    <div class="show-row show-row--tba">
+      <div class="show-date"><span class="month">—</span><span class="day">TBA</span></div>
+      <div class="show-info">
+        <div class="show-title">More Dates Coming</div>
+        <div class="show-venue">Venue TBA</div>
+      </div>
+      <div class="show-status"><span class="status-badge soon">TBA</span></div>
     </div>
   </div>
 </section>

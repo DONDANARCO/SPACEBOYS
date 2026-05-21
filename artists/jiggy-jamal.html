@@ -64,14 +64,14 @@
 <section class="artist-section" id="photos" style="background:var(--surface);">
   <div class="artist-section-header reveal"><div class="section-tag">Photos</div><h2 class="section-title" style="font-size:clamp(28px,4vw,48px);">Gallery</h2></div>
   <div class="photo-grid reveal">
-    <div class="photo-cell large">
+    <button type="button" class="photo-cell large" data-lightbox="jiggy-photos">
       <img src="../assets/images/Jiggy%20Mall/Jiggymall%20headshot.jpeg" alt="Jiggy Jamal">
-    </div>
-    <div class="photo-cell"><img src="../assets/images/Jiggy%20Mall/Jiggymall.jpeg" alt="Jiggy Jamal"></div>
-    <div class="photo-cell"><img src="../assets/images/Jiggy%20Mall/Jiggymall%201.jpeg" alt="Jiggy Jamal"></div>
-    <div class="photo-cell"><img src="../assets/images/Jiggy%20Mall/Jiggymall%20outside.jpeg" alt="Jiggy Jamal outside"></div>
-    <div class="photo-cell"><img src="../assets/images/Jiggy%20Mall/Jiggymall%20hot%20boy.jpeg" alt="Jiggy Jamal"></div>
-    <div class="photo-cell"><img src="../assets/images/Space%20Boys%20Artists/Kelly%20price%20left%20jamall%20middle%20kayson%20right.jpeg" alt="SPACEBOYS roster"></div>
+    </button>
+    <button type="button" class="photo-cell" data-lightbox="jiggy-photos"><img src="../assets/images/Jiggy%20Mall/Jiggymall.jpeg" alt="Jiggy Jamal"></button>
+    <button type="button" class="photo-cell" data-lightbox="jiggy-photos"><img src="../assets/images/Jiggy%20Mall/Jiggymall%201.jpeg" alt="Jiggy Jamal"></button>
+    <button type="button" class="photo-cell" data-lightbox="jiggy-photos"><img src="../assets/images/Jiggy%20Mall/Jiggymall%20outside.jpeg" alt="Jiggy Jamal outside"></button>
+    <button type="button" class="photo-cell" data-lightbox="jiggy-photos"><img src="../assets/images/Jiggy%20Mall/Jiggymall%20hot%20boy.jpeg" alt="Jiggy Jamal"></button>
+    <button type="button" class="photo-cell" data-lightbox="jiggy-photos"><img src="../assets/images/Space%20Boys%20Artists/Kelly%20price%20left%20jamall%20middle%20kayson%20right.jpeg" alt="SPACEBOYS roster"></button>
   </div>
 </section>
 
@@ -117,10 +117,25 @@
 <section class="artist-section" id="shows">
   <div class="artist-section-header reveal"><div class="section-tag">Live</div><h2 class="section-title" style="font-size:clamp(28px,4vw,48px);">Shows</h2></div>
   <div class="shows-grid reveal">
-    <div class="show-row">
-      <div class="show-date"><span class="month">Aug</span><span class="day">22</span></div>
-      <div class="show-info"><div class="show-title">Campus Tour — Leg 1</div><div class="show-venue">University of Pretoria</div></div>
-      <div class="show-status"><span class="status-badge soon">Coming Soon</span><a href="../community.html" class="btn btn-ghost btn-sm">Notify Me</a></div>
+    <div class="show-row show-row--featured">
+      <div class="show-date"><span class="month">Jun</span><span class="day">20</span><span class="show-year">2026</span></div>
+      <div class="show-info">
+        <div class="show-title">Introduction to Space Fest</div>
+        <div class="show-venue">Venue TBA · Pretoria, Gauteng</div>
+        <div class="show-artist show-artist--roster">Full SPACEBOYS artist roster</div>
+      </div>
+      <div class="show-status">
+        <span class="status-badge upcoming">Upcoming</span>
+        <a href="../index.html?rsvp=1#shows" class="btn btn-primary btn-sm">RSVP</a>
+      </div>
+    </div>
+    <div class="show-row show-row--tba">
+      <div class="show-date"><span class="month">—</span><span class="day">TBA</span></div>
+      <div class="show-info">
+        <div class="show-title">More Dates Coming</div>
+        <div class="show-venue">Venue TBA</div>
+      </div>
+      <div class="show-status"><span class="status-badge soon">TBA</span></div>
     </div>
   </div>
 </section>

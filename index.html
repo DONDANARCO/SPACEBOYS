@@ -134,7 +134,7 @@
   <div class="artists-roster-photo reveal">
     <img src="assets/images/Space%20Boys%20Artists/Kelly%20price%20left%20jamall%20middle%20kayson%20right.jpeg" alt="Kelly Price, Jiggy Jamal, and Kayson Woods — SPACEBOYS Artists">
   </div>
-  <div class="carousel-wrapper reveal">
+  <div class="carousel-wrapper carousel-wrapper--auto reveal">
     <div class="carousel-track" id="carouselTrack">
 
       <a href="artists/kayson-woods.html" class="artist-card">
@@ -216,46 +216,34 @@
       <a href="#contact" class="btn btn-primary">Book A Session</a>
     </div>
   </div>
-  <div class="service-block service-block--partners" data-num="02">
+  <div class="service-block" data-num="02">
     <div class="reveal">
-      <div class="section-tag">Partners</div>
-      <h2 class="section-title" style="font-size:clamp(28px,4vw,52px);">Who We<br>Work With.</h2>
-      <p class="section-sub">Distribution and web presence powered by trusted partners in the music industry.</p>
-      <div class="partner-tabs" role="tablist">
-        <button type="button" class="partner-tab active" data-partner="ditto" role="tab" aria-selected="true">Ditto</button>
-        <button type="button" class="partner-tab" data-partner="webxbeam" role="tab" aria-selected="false">WebxBeam</button>
-      </div>
-      <div class="partner-panel" data-partner="ditto">
-        <h3 class="partner-name">Ditto Music</h3>
-        <p class="partner-desc">Music distribution across Spotify, Apple Music, TikTok, and more — while artists keep their rights. SPACEBOYS works with Ditto to get your releases out worldwide.</p>
-        <ul class="service-list">
-          <li>Global streaming distribution</li>
-          <li>Release planning &amp; delivery</li>
-          <li>Rights retained by the artist</li>
-        </ul>
-        <a href="https://dittomusic.com" target="_blank" rel="noopener" class="btn btn-outline">Learn About Ditto →</a>
-      </div>
-      <div class="partner-panel" data-partner="webxbeam" hidden>
-        <h3 class="partner-name">WebxBeam</h3>
-        <p class="partner-desc">Your artist website — SPACEBOYS helps artists create professional profiles and portfolios: fully web-hosted sites for bio, photos, videos, music, and shows.</p>
-        <ul class="service-list">
-          <li>Hosted artist pages</li>
-          <li>Bio &amp; press kit</li>
-          <li>Photo, video &amp; music galleries</li>
-          <li>Show listings &amp; social links</li>
-        </ul>
-        <a href="https://www.webxbeam.co.za" target="_blank" rel="noopener" class="btn btn-outline">Visit WebxBeam →</a>
-        <a href="#artists" class="btn btn-ghost btn-sm" style="margin-top:12px;">View Roster Pages</a>
-      </div>
+      <div class="section-tag">Artist Portfolios</div>
+      <h2 class="section-title" style="font-size:clamp(28px,4vw,52px);">Your Artist<br>Website.</h2>
+      <p class="section-sub">SPACEBOYS helps artists create professional profiles and portfolios — fully web-hosted sites for bio, photos, videos, music, and shows.</p>
+      <ul class="service-list">
+        <li>Hosted Artist Pages</li>
+        <li>Bio &amp; Press Kit</li>
+        <li>Photo &amp; Video Galleries</li>
+        <li>Music Previews &amp; Streaming Links</li>
+        <li>Music Distribution Support</li>
+        <li>Show Listings &amp; Social Links</li>
+      </ul>
+      <a href="#artists" class="btn btn-outline">View Artist Pages</a>
     </div>
   </div>
 </div>
 
-<section id="partners" class="partners-banner reveal">
-  <div class="partners-banner-inner">
-    <p class="section-tag">Trusted Partners</p>
-    <p class="partners-banner-text">Distribution by <strong>Ditto</strong> · Artist websites by <strong>WebxBeam</strong></p>
-    <a href="#services" class="btn btn-ghost btn-sm">See Partner Details</a>
+<section id="partners" class="partners-section reveal">
+  <div class="partners-section-header">
+    <div class="section-tag">Partners</div>
+    <h2 class="section-title" style="font-size:clamp(28px,4vw,48px);">Our Partners</h2>
+  </div>
+  <div class="carousel-wrapper partners-carousel carousel-wrapper--auto">
+    <div class="carousel-track" id="partnersTrack">
+      <div class="partner-slide"><span class="partner-slide-name">Ditto</span></div>
+      <div class="partner-slide"><span class="partner-slide-name">WebxBeam</span></div>
+    </div>
   </div>
 </section>
 
@@ -263,43 +251,41 @@
   <div class="reveal">
     <div class="section-tag">Live</div>
     <h2 class="section-title">Upcoming<br>Shows</h2>
-    <p class="section-sub">Catch SPACEBOYS artists live. Book tickets early — these sell out.</p>
+    <p class="section-sub">Catch SPACEBOYS artists live. RSVP for our next festival — the full roster on one stage.</p>
   </div>
   <div class="shows-grid reveal">
-    <div class="show-row">
-      <div class="show-date"><span class="month">Jun</span><span class="day">14</span></div>
+    <div class="show-row show-row--featured">
+      <div class="show-date"><span class="month">Jun</span><span class="day">20</span><span class="show-year">2026</span></div>
       <div class="show-info">
-        <div class="show-title">SPACEBOYS Showcase</div>
-        <div class="show-venue">Pretoria, Gauteng — TBA Venue</div>
+        <div class="show-title">Introduction to Space Fest</div>
+        <div class="show-venue">Venue TBA · Pretoria, Gauteng</div>
+        <div class="show-artist show-artist--roster">Full SPACEBOYS artist roster performing</div>
       </div>
-      <div class="show-artist"><a href="artists/kayson-woods.html" style="color:inherit;text-decoration:none;">Kayson Woods</a></div>
       <div class="show-status">
         <span class="status-badge upcoming">Upcoming</span>
-        <a href="#contact" class="btn btn-outline btn-sm">Tickets</a>
+        <button type="button" class="btn btn-primary btn-sm" onclick="openRsvpModal()">RSVP</button>
       </div>
     </div>
-    <div class="show-row">
-      <div class="show-date"><span class="month">Jul</span><span class="day">05</span></div>
+    <div class="show-row show-row--tba">
+      <div class="show-date"><span class="month">—</span><span class="day">TBA</span></div>
       <div class="show-info">
-        <div class="show-title">Summer Night Set</div>
-        <div class="show-venue">Johannesburg, Gauteng — Club TBD</div>
+        <div class="show-title">More Dates Coming</div>
+        <div class="show-venue">Venue &amp; city TBA</div>
+        <div class="show-artist show-artist--roster">SPACEBOYS Records</div>
       </div>
-      <div class="show-artist"><a href="artists/kelly-price.html" style="color:inherit;text-decoration:none;">Kelly Price</a></div>
       <div class="show-status">
-        <span class="status-badge upcoming">Upcoming</span>
-        <a href="#contact" class="btn btn-outline btn-sm">Tickets</a>
+        <span class="status-badge soon">TBA</span>
       </div>
     </div>
-    <div class="show-row">
-      <div class="show-date"><span class="month">Aug</span><span class="day">22</span></div>
+    <div class="show-row show-row--tba">
+      <div class="show-date"><span class="month">—</span><span class="day">TBA</span></div>
       <div class="show-info">
-        <div class="show-title">Campus Tour — Leg 1</div>
-        <div class="show-venue">University of Pretoria</div>
+        <div class="show-title">Tour &amp; Showcases</div>
+        <div class="show-venue">Venue TBA</div>
+        <div class="show-artist show-artist--roster">SPACEBOYS Records</div>
       </div>
-      <div class="show-artist"><a href="artists/jiggy-jamal.html" style="color:inherit;text-decoration:none;">Jiggy Jamal</a></div>
       <div class="show-status">
-        <span class="status-badge soon">Coming Soon</span>
-        <a href="community.html" class="btn btn-ghost btn-sm">Notify Me</a>
+        <span class="status-badge soon">TBA</span>
       </div>
     </div>
   </div>
@@ -309,7 +295,7 @@
   <div class="reveal">
     <div class="section-tag">Distribution</div>
     <h2 class="section-title">Get Your<br>Music Out.</h2>
-    <p class="section-sub">We assist unsigned artists with getting their music distributed across all major streaming platforms — on your terms, in partnership with <a href="#partners" style="color:var(--purple);">Ditto Music</a>.</p>
+    <p class="section-sub">We assist unsigned artists with getting their music distributed across all major streaming platforms — on your terms.</p>
     <div class="dist-features">
       <div class="dist-feature">
         <div class="dist-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>
@@ -589,6 +575,21 @@
 <div class="toast" id="toast">
   <span class="toast-icon">★</span>
   <span id="toastMsg">Welcome to SPACEBOYS.</span>
+</div>
+
+<div class="modal" id="rsvpModal" role="dialog" aria-labelledby="rsvpModalTitle" aria-modal="true">
+  <div class="modal-backdrop" onclick="closeRsvpModal()"></div>
+  <div class="modal-panel">
+    <button type="button" class="modal-close" onclick="closeRsvpModal()" aria-label="Close">&times;</button>
+    <div class="section-tag">RSVP</div>
+    <h2 class="modal-title" id="rsvpModalTitle">Introduction to Space Fest</h2>
+    <p class="modal-sub">Saturday 20 June 2026 · Venue TBA · Full SPACEBOYS roster</p>
+    <form class="community-form" data-event="introduction-to-space-fest-2026" onsubmit="handleRsvp(event)">
+      <input type="text" name="name" placeholder="Full Name" required autocomplete="name" />
+      <input type="email" name="email" placeholder="Email Address" required autocomplete="email" />
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">Confirm RSVP →</button>
+    </form>
+  </div>
 </div>
 
 <script src="assets/js/main.js"></script>
