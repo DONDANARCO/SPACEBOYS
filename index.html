@@ -55,7 +55,7 @@
   <div class="planet float-anim" style="width:24px;height:24px;right:340px;top:30%;background:var(--purple);opacity:0.6;"></div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow"><span></span> Est. 2019 — Pretoria</div>
+    <div class="hero-eyebrow"><span></span> Est. 2019 — South Africa</div>
     <h1 class="hero-title">SPACE<span class="hollow">BOYS</span></h1>
     <p class="hero-subtitle">A Record Label. A Movement. A Creative Universe.<br>Music, culture, fashion &amp; live experiences — all under one platform.</p>
     <div class="hero-ctas">
@@ -139,7 +139,7 @@
 
       <a href="artists/kayson-woods.html" class="artist-card">
         <div class="artist-card-img">
-          <img src="assets/images/Kayson%20woods/Kayson%20woods.jpeg" alt="Kayson Woods">
+          <img src="assets/images/Kayson%20woods/Kayson%20woods%20headshots.jpeg" alt="Kayson Woods">
           <div class="artist-initial">K</div>
           <div class="artist-genre-badge">Hip-Hop / Rap</div>
         </div>
@@ -258,12 +258,12 @@
       <div class="show-date"><span class="month">Jun</span><span class="day">20</span><span class="show-year">2026</span></div>
       <div class="show-info">
         <div class="show-title">Introduction to Space Fest</div>
-        <div class="show-venue">Venue TBA · Pretoria, Gauteng</div>
+        <div class="show-venue">Venue TBA</div>
         <div class="show-artist show-artist--roster">Full SPACEBOYS artist roster performing</div>
       </div>
       <div class="show-status">
         <span class="status-badge upcoming">Upcoming</span>
-        <button type="button" class="btn btn-primary btn-sm" onclick="openRsvpModal()">RSVP</button>
+        <button type="button" class="btn btn-primary btn-sm" data-rsvp-open>RSVP</button>
       </div>
     </div>
     <div class="show-row show-row--tba">
@@ -526,7 +526,7 @@
   <div class="footer-top">
     <div class="footer-brand">
       <div class="logo">SPACEBOYS</div>
-      <p>A Record Label. A Movement. A Creative Universe. Est. 2019 — Pretoria, South Africa.</p>
+      <p>A Record Label. A Movement. A Creative Universe. Est. 2019 — South Africa.</p>
       <div class="social-row" style="margin-top:0;">
         <a class="social-btn" href="https://www.instagram.com/spaceboysrec?igsh=b3QxZmRsOW4xNnQ5" target="_blank" rel="noopener" title="Instagram @spaceboysrec" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
         <a class="social-btn" href="https://www.tiktok.com/@spaceboysrec?_r=1&amp;_t=ZS-96Y3T4eZcmq" target="_blank" rel="noopener" title="TikTok @spaceboysrec" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34v-7.1a8.16 8.16 0 004.77 1.53v-3.38a4.85 4.85 0 01-1-.66z"/></svg></a>
@@ -578,13 +578,13 @@
 </div>
 
 <div class="modal" id="rsvpModal" role="dialog" aria-labelledby="rsvpModalTitle" aria-modal="true">
-  <div class="modal-backdrop" onclick="closeRsvpModal()"></div>
+  <div class="modal-backdrop" data-rsvp-close></div>
   <div class="modal-panel">
-    <button type="button" class="modal-close" onclick="closeRsvpModal()" aria-label="Close">&times;</button>
+    <button type="button" class="modal-close" data-rsvp-close aria-label="Close">&times;</button>
     <div class="section-tag">RSVP</div>
     <h2 class="modal-title" id="rsvpModalTitle">Introduction to Space Fest</h2>
     <p class="modal-sub">Saturday 20 June 2026 · Venue TBA · Full SPACEBOYS roster</p>
-    <form class="community-form" data-event="introduction-to-space-fest-2026" onsubmit="handleRsvp(event)">
+    <form class="community-form rsvp-form" data-event="introduction-to-space-fest-2026">
       <input type="text" name="name" placeholder="Full Name" required autocomplete="name" />
       <input type="email" name="email" placeholder="Email Address" required autocomplete="email" />
       <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">Confirm RSVP →</button>

@@ -101,9 +101,16 @@ const observer = new IntersectionObserver((entries) => {
 revealEls.forEach((el) => observer.observe(el));
 
 function showToast(msg) {
-  const toast = document.getElementById('toast');
+  let toast = document.getElementById('toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.id = 'toast';
+    toast.innerHTML = '<span class="toast-icon">★</span><span id="toastMsg"></span>';
+    document.body.appendChild(toast);
+  }
   const msgEl = document.getElementById('toastMsg');
-  if (!toast || !msgEl) return;
+  if (!msgEl) return;
   msgEl.textContent = msg;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 3500);
@@ -178,14 +185,72 @@ async function handleRsvp(e) {
 }
 
 function openRsvpModal() {
-  document.getElementById('rsvpModal')?.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  const modal = document.getElementById('rsvpModal');
+  if (!modal) return;
+  modal.classList.add('open');
+  document.body.classList.add('modal-open');
+  const firstInput = modal.querySelector('input[name="name"]');
+  requestAnimationFrame(() => firstInput?.focus());
 }
 
 function closeRsvpModal() {
-  document.getElementById('rsvpModal')?.classList.remove('open');
-  document.body.style.overflow = '';
+  const modal = document.getElementById('rsvpModal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.body.classList.remove('modal-open');
 }
+
+function initRsvpModal() {
+  if (document.body.dataset.rsvpInit) return;
+  document.body.dataset.rsvpInit = 'true';
+
+  let modal = document.getElementById('rsvpModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.id = 'rsvpModal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-labelledby', 'rsvpModalTitle');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML = `
+      <div class="modal-backdrop" data-rsvp-close></div>
+      <div class="modal-panel">
+        <button type="button" class="modal-close" data-rsvp-close aria-label="Close">&times;</button>
+        <div class="section-tag">RSVP</div>
+        <h2 class="modal-title" id="rsvpModalTitle">Introduction to Space Fest</h2>
+        <p class="modal-sub">Saturday 20 June 2026 · Venue TBA · Full SPACEBOYS roster</p>
+        <form class="community-form rsvp-form" data-event="introduction-to-space-fest-2026">
+          <input type="text" name="name" placeholder="Full Name" required autocomplete="name" />
+          <input type="email" name="email" placeholder="Email Address" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">Confirm RSVP →</button>
+        </form>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+
+  modal.querySelector('.rsvp-form')?.addEventListener('submit', handleRsvp);
+  modal.querySelectorAll('[data-rsvp-close]').forEach((el) => {
+    el.addEventListener('click', closeRsvpModal);
+  });
+
+  document.querySelectorAll('[data-rsvp-open]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openRsvpModal();
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.getElementById('rsvpModal')?.classList.contains('open')) {
+      closeRsvpModal();
+    }
+  });
+}
+
+window.openRsvpModal = openRsvpModal;
+window.closeRsvpModal = closeRsvpModal;
+window.handleRsvp = handleRsvp;
 
 function toggleMobileNav() {
   document.getElementById('mobileNav')?.classList.toggle('open');
@@ -282,9 +347,10 @@ function initLightbox() {
 
 initGalleryTabs();
 initLightbox();
+initRsvpModal();
 
 if (new URLSearchParams(window.location.search).get('rsvp')) {
-  window.addEventListener('load', () => openRsvpModal());
+  openRsvpModal();
 }
 
 if (document.querySelector('.nav-links')) {
