@@ -55,18 +55,21 @@ nav {
 }
 
 .nav-logo {
-  display: flex;
-  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.12em;
+  color: var(--white);
   text-decoration: none;
-  line-height: 0;
+  position: relative;
 }
-.nav-logo-img {
-  display: block;
-  height: 40px;
-  width: auto;
-  max-width: min(180px, 42vw);
-  object-fit: contain;
-  object-position: left center;
+.nav-logo::after {
+  content: '★';
+  font-size: 10px;
+  color: var(--purple);
+  position: absolute;
+  top: -4px;
+  right: -14px;
 }
 
 .nav-links { display: flex; gap: 32px; list-style: none; }
@@ -402,7 +405,6 @@ section { padding: 120px 48px; }
 }
 .artist-card-img img,
 .artist-hero-photo img,
-.about-card-logo img,
 .merch-img img,
 .featured-artist-photo img,
 .featured-artwork img,
@@ -426,8 +428,7 @@ section { padding: 120px 48px; }
   display: block;
   position: relative;
 }
-.artist-card-img img,
-.about-card-logo img {
+.artist-card-img img {
   position: absolute;
   inset: 0;
 }
@@ -733,10 +734,52 @@ section { padding: 120px 48px; }
   color: var(--text-dim);
   margin-bottom: 24px;
 }
-.about-card-logo img {
+.about-card-main {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-card-brand {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 32px 16px;
+  min-height: 0;
+}
+.about-card-wordmark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(36px, 5vw, 56px);
+  letter-spacing: 0.06em;
+  color: var(--white);
+  line-height: 1;
+  text-align: center;
+}
+.about-card-wordmark .hollow {
+  -webkit-text-stroke: 1px var(--white);
+  color: transparent;
+}
+.about-card-main .about-card-logo {
+  position: relative;
+  inset: auto;
+  flex: 0 0 auto;
+  width: min(220px, 70%);
+  max-height: min(220px, 40vh);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-card-main .about-card-logo img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
   object-fit: contain;
-  padding: 12px;
-  box-sizing: border-box;
+  object-position: center;
 }
 .featured-carousel .carousel-wrapper::after {
   background: linear-gradient(90deg, transparent, var(--bg));
@@ -1012,24 +1055,6 @@ footer { border-top: 1px solid var(--border); padding: 60px 48px 40px; backgroun
   height: 100%;
   object-fit: contain;
   object-position: center top;
-}
-.about-card-main .about-card-logo {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px;
-  opacity: 0.95;
-}
-.about-card-main .about-card-logo img {
-  position: relative;
-  inset: auto;
-  max-width: 280px;
-  max-height: 280px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
 }
 .artist-hero-info { position: relative; z-index: 2; padding-bottom: 24px; }
 .artist-hero-genre {

@@ -25,9 +25,7 @@
 </div>
 
 <nav>
-  <a href="index.html" class="nav-logo">
-    <img src="assets/images/Space%20boys/SPACEBOYS%20Landing%20page%20logo.jpeg" alt="SPACEBOYS" class="nav-logo-img" width="160" height="48">
-  </a>
+  <a href="index.html" class="nav-logo">SPACEBOYS</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#artists">Artists</a></li>
@@ -58,9 +56,9 @@
   <div class="planet float-anim" style="width:24px;height:24px;right:340px;top:30%;background:var(--purple);opacity:0.6;"></div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow"><span></span> Est. 2019 — South Africa</div>
-    <h1 class="hero-title">SPACE<span class="hollow">BOYS</span></h1>
-    <p class="hero-subtitle">A Record Label. A Movement. A Creative Universe.<br>Music, culture, fashion &amp; live experiences — all under one platform.</p>
+    <div class="hero-eyebrow" data-content="hero.eyebrow"><span></span> Est. 2019 — South Africa</div>
+    <h1 class="hero-title" data-content="hero.title">SPACE<span class="hollow">BOYS</span></h1>
+    <p class="hero-subtitle" data-content="hero.subtitle" data-content-html="true">A Record Label. A Movement. A Creative Universe.<br>Music, culture, fashion &amp; live experiences — all under one platform.</p>
     <div class="hero-ctas">
       <a href="#artists" class="btn btn-primary">Meet The Artists</a>
       <a href="#services" class="btn btn-outline">Book Studio</a>
@@ -95,10 +93,10 @@
 <section id="about">
   <div class="reveal">
     <div class="section-tag">About Us</div>
-    <h2 class="section-title">More Than<br>A Label.</h2>
-    <p class="section-sub">SPACEBOYS is an independent record label and creative platform built around music, culture, and artistic freedom — without restrictive deals.</p>
-    <p style="font-size:14px;line-height:1.8;color:var(--text-dim);max-width:480px;margin-bottom:24px;">We empower artists to record professional music, distribute their work independently, and connect with audiences on their own terms. No cages. No compromise.</p>
-    <p style="font-size:14px;line-height:1.8;color:var(--text-dim);max-width:480px;margin-bottom:40px;">SPACEBOYS also helps artists build hosted artist profiles and portfolios — web-hosted sites that work like personal websites for your music, visuals, and story.</p>
+    <h2 class="section-title" data-content="about.title" data-content-html="true">More Than<br>A Label.</h2>
+    <p class="section-sub" data-content="about.p1">SPACEBOYS is an independent record label and creative platform built around music, culture, and artistic freedom — without restrictive deals.</p>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-dim);max-width:480px;margin-bottom:24px;" data-content="about.p2">We empower artists to record professional music, distribute their work independently, and connect with audiences on their own terms. No cages. No compromise.</p>
+    <p style="font-size:14px;line-height:1.8;color:var(--text-dim);max-width:480px;margin-bottom:40px;" data-content="about.p3">SPACEBOYS also helps artists build hosted artist profiles and portfolios — web-hosted sites that work like personal websites for your music, visuals, and story.</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
       <a href="#artists" class="btn btn-primary">Meet Our Artists</a>
       <a href="#join-community" class="btn btn-ghost">Join Community</a>
@@ -112,8 +110,11 @@
   </div>
   <div class="about-visual reveal">
     <div class="about-card about-card-main">
-      <div class="about-card-logo">
-        <img src="assets/images/Space%20boys/SPACEBOYS%20Landing%20page%20logo.jpeg" alt="SPACEBOYS Records logo">
+      <div class="about-card-brand">
+        <div class="about-card-wordmark">SPACE<span class="hollow">BOYS</span></div>
+        <div class="about-card-logo">
+          <img src="assets/images/Space%20boys/SPACEBOYS%20Landing%20page%20logo.jpeg" alt="SPACEBOYS Records emblem" loading="lazy" decoding="async">
+        </div>
       </div>
       <div class="about-card-content">
         <div class="about-card-label">Artist Portfolios</div>
@@ -260,9 +261,9 @@
     <div class="show-row show-row--featured">
       <div class="show-date"><span class="month">Jun</span><span class="day">20</span><span class="show-year">2026</span></div>
       <div class="show-info">
-        <div class="show-title">Introduction to Space Fest</div>
-        <div class="show-venue">Venue TBA</div>
-        <div class="show-artist show-artist--roster">Full SPACEBOYS artist roster performing</div>
+        <div class="show-title" data-content="event.title">Introduction to Space Fest</div>
+        <div class="show-venue" data-content="event.venue">Venue TBA</div>
+        <div class="show-artist show-artist--roster" data-content="event.roster">Full SPACEBOYS artist roster performing</div>
       </div>
       <div class="show-status">
         <span class="status-badge upcoming">Upcoming</span>
@@ -343,37 +344,37 @@
     </div>
   </div>
   <div class="merch-grid reveal">
-    <a href="merchandise.html" class="merch-card">
+    <a href="merchandise.html" class="merch-card" data-merch-index="0">
       <div class="merch-img">
-        <img src="assets/images/Merch/Hoodie.jpg" alt="SPACEBOYS hoodie" loading="lazy" decoding="async">
+        <img src="assets/images/Merch/Hoodie.jpg" alt="SPACEBOYS hoodie" data-merch-image loading="lazy" decoding="async">
         <span class="merch-img-label">HOODIE</span><span class="merch-badge">New</span>
       </div>
       <div class="merch-body">
-        <div class="merch-name">SPACEBOYS Hoodie</div>
-        <div class="merch-type">Hoodies</div>
-        <div class="merch-footer"><div class="merch-price">R 750</div></div>
+        <div class="merch-name" data-merch-name>SPACEBOYS Hoodie</div>
+        <div class="merch-type" data-merch-type>Hoodies</div>
+        <div class="merch-footer"><div class="merch-price" data-merch-price>R 750</div></div>
       </div>
     </a>
-    <a href="merchandise.html" class="merch-card">
+    <a href="merchandise.html" class="merch-card" data-merch-index="1">
       <div class="merch-img">
-        <img src="assets/images/Merch/tee2.webp" alt="SPACEBOYS tee" loading="lazy" decoding="async">
+        <img src="assets/images/Merch/tee2.webp" alt="SPACEBOYS tee" data-merch-image loading="lazy" decoding="async">
         <span class="merch-img-label">TEE</span>
       </div>
       <div class="merch-body">
-        <div class="merch-name">Classic Tee</div>
-        <div class="merch-type">T-Shirts</div>
-        <div class="merch-footer"><div class="merch-price">R 350</div></div>
+        <div class="merch-name" data-merch-name>Classic Tee</div>
+        <div class="merch-type" data-merch-type>T-Shirts</div>
+        <div class="merch-footer"><div class="merch-price" data-merch-price>R 350</div></div>
       </div>
     </a>
-    <a href="merchandise.html" class="merch-card">
+    <a href="merchandise.html" class="merch-card" data-merch-index="2">
       <div class="merch-img">
-        <img src="assets/images/Merch/caps.webp" alt="SPACEBOYS cap" loading="lazy" decoding="async">
+        <img src="assets/images/Merch/caps.webp" alt="SPACEBOYS cap" data-merch-image loading="lazy" decoding="async">
         <span class="merch-img-label">CAP</span><span class="merch-badge">Limited</span>
       </div>
       <div class="merch-body">
-        <div class="merch-name">SPCBYS Cap</div>
-        <div class="merch-type">Hats</div>
-        <div class="merch-footer"><div class="merch-price">R 280</div></div>
+        <div class="merch-name" data-merch-name>SPCBYS Cap</div>
+        <div class="merch-type" data-merch-type>Hats</div>
+        <div class="merch-footer"><div class="merch-price" data-merch-price>R 280</div></div>
       </div>
     </a>
   </div>
@@ -538,6 +539,7 @@
 </div>
 
 <script src="assets/js/analytics.js" defer></script>
+<script src="assets/js/site-content.js" defer></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

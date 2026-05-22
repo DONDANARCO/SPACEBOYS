@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "npx vercel@48 dev",
     "dev:static": "npx --yes serve . -l 3000",
-    "build": "npx --yes esbuild@0.25.0 assets/js/analytics.entry.mjs --bundle --format=iife --outfile=assets/js/analytics.js --minify"
+    "build": "npx --yes esbuild@0.25.0 assets/js/analytics.entry.mjs --bundle --format=iife --outfile=assets/js/analytics.js --minify",
+    "convert:kayson-video": "ffmpeg -y -i \"assets/Videos/Kayson woods/Kayson live at sportcene.mov\" -c:v libx264 -preset fast -crf 23 -c:a aac -movflags +faststart \"assets/Videos/Kayson woods/Kayson live at sportcene.mp4\""
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.758.0",

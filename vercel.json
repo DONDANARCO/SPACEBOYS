@@ -10,7 +10,8 @@
     { "source": "/community", "destination": "/community.html" },
     { "source": "/artists/kayson-woods", "destination": "/artists/kayson-woods.html" },
     { "source": "/artists/kelly-price", "destination": "/artists/kelly-price.html" },
-    { "source": "/artists/jiggy-jamal", "destination": "/artists/jiggy-jamal.html" }
+    { "source": "/artists/jiggy-jamal", "destination": "/artists/jiggy-jamal.html" },
+    { "source": "/admin", "destination": "/admin.html" }
   ],
   "headers": [
     {

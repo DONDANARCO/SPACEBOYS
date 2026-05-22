@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SPACEBOYS Admin</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+.admin-page { min-height: 100vh; padding: 100px 24px 48px; max-width: 900px; margin: 0 auto; }
+.admin-page h1 { font-family: var(--font-display); font-size: 32px; margin-bottom: 8px; }
+.admin-panel { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 32px; }
+.admin-panel[hidden] { display: none !important; }
+.admin-field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.admin-field label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); }
+.admin-field input, .admin-field textarea {
+  width: 100%; padding: 12px 14px; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 2px; color: var(--white); font-size: 15px;
+}
+.admin-field textarea { min-height: 88px; resize: vertical; }
+.admin-section-title { font-family: var(--font-display); font-size: 18px; margin: 32px 0 16px; color: var(--white); }
+.admin-merch-block { padding: 20px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; }
+.admin-toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 24px; }
+.admin-status { font-family: var(--font-mono); font-size: 11px; margin-top: 16px; }
+.admin-status--ok { color: var(--purple); }
+.admin-status--err { color: #ff6b6b; }
+.admin-hint { font-size: 13px; color: var(--text-dim); margin-bottom: 24px; line-height: 1.6; }
+#lastUpdated { font-family: var(--font-mono); font-size: 10px; color: var(--gray); margin-bottom: 16px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">SPACEBOYS</a>
+  <div class="nav-cta">
+    <a href="index.html" class="btn btn-ghost btn-sm">← Site</a>
+    <button type="button" class="btn btn-outline btn-sm" id="logoutBtn" hidden>Sign Out</button>
+  </div>
+</nav>
+
+<main class="admin-page">
+  <h1>Site Admin</h1>
+  <p class="admin-hint">Edit homepage copy, featured event, and merch without changing code. Set <code>ADMIN_PASSWORD</code> in Vercel environment variables.</p>
+
+  <div class="admin-panel" id="loginPanel">
+    <form id="loginForm">
+      <div class="admin-field">
+        <label for="adminPassword">Admin password</label>
+        <input type="password" id="adminPassword" required autocomplete="current-password" />
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+  </div>
+
+  <div class="admin-panel" id="adminPanel" hidden>
+    <p id="lastUpdated"></p>
+    <form id="contentForm">
+      <div class="admin-section-title">Hero</div>
+      <div class="admin-field"><label for="heroEyebrow">Eyebrow</label><input id="heroEyebrow" /></div>
+      <div class="admin-field"><label for="heroSubtitle">Subtitle</label><textarea id="heroSubtitle"></textarea></div>
+
+      <div class="admin-section-title">About</div>
+      <div class="admin-field"><label for="aboutTitle">Title (use \n for line break)</label><textarea id="aboutTitle"></textarea></div>
+      <div class="admin-field"><label for="aboutP1">Paragraph 1</label><textarea id="aboutP1"></textarea></div>
+      <div class="admin-field"><label for="aboutP2">Paragraph 2</label><textarea id="aboutP2"></textarea></div>
+      <div class="admin-field"><label for="aboutP3">Paragraph 3</label><textarea id="aboutP3"></textarea></div>
+
+      <div class="admin-section-title">Featured event</div>
+      <div class="admin-field"><label for="eventTitle">Event name</label><input id="eventTitle" /></div>
+      <div class="admin-field"><label for="eventDate">Date line</label><input id="eventDate" /></div>
+      <div class="admin-field"><label for="eventVenue">Venue</label><input id="eventVenue" /></div>
+      <div class="admin-field"><label for="eventRoster">Roster note</label><input id="eventRoster" /></div>
+
+      <div class="admin-section-title">Merchandise (3 items)</div>
+      <div class="admin-merch-block">
+        <div class="admin-field"><label for="merchName0">Hoodie name</label><input id="merchName0" /></div>
+        <div class="admin-field"><label for="merchType0">Type</label><input id="merchType0" /></div>
+        <div class="admin-field"><label for="merchPrice0">Price</label><input id="merchPrice0" /></div>
+        <div class="admin-field"><label for="merchImage0">Image path</label><input id="merchImage0" placeholder="assets/images/Merch/Hoodie.jpg" /></div>
+        <div class="admin-field"><label for="merchDesc0">Description</label><textarea id="merchDesc0"></textarea></div>
+      </div>
+      <div class="admin-merch-block">
+        <div class="admin-field"><label for="merchName1">Tee name</label><input id="merchName1" /></div>
+        <div class="admin-field"><label for="merchType1">Type</label><input id="merchType1" /></div>
+        <div class="admin-field"><label for="merchPrice1">Price</label><input id="merchPrice1" /></div>
+        <div class="admin-field"><label for="merchImage1">Image path</label><input id="merchImage1" /></div>
+        <div class="admin-field"><label for="merchDesc1">Description</label><textarea id="merchDesc1"></textarea></div>
+      </div>
+      <div class="admin-merch-block">
+        <div class="admin-field"><label for="merchName2">Cap name</label><input id="merchName2" /></div>
+        <div class="admin-field"><label for="merchType2">Type</label><input id="merchType2" /></div>
+        <div class="admin-field"><label for="merchPrice2">Price</label><input id="merchPrice2" /></div>
+        <div class="admin-field"><label for="merchImage2">Image path</label><input id="merchImage2" /></div>
+        <div class="admin-field"><label for="merchDesc2">Description</label><textarea id="merchDesc2"></textarea></div>
+      </div>
+
+      <div class="admin-toolbar">
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        <a href="/api/entries" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">View form entries</a>
+      </div>
+    </form>
+    <p class="admin-status" id="adminStatus"></p>
+    <p class="admin-hint" style="margin-top:24px;">To change images or videos on disk, upload files to the repo folders (<code>assets/images</code>, <code>assets/Videos</code>) and update paths here. Fan dashboard, payments, and uploads are planned for a later phase.</p>
+  </div>
+</main>
+
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
