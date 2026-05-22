@@ -347,9 +347,18 @@ function initLightbox() {
   });
 }
 
+function initLazyImages() {
+  document.querySelectorAll('img:not([loading])').forEach((img) => {
+    if (img.closest('#hero')) return;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+  });
+}
+
 initGalleryTabs();
 initLightbox();
 initRsvpModal();
+initLazyImages();
 
 if (new URLSearchParams(window.location.search).get('rsvp')) {
   openRsvpModal();

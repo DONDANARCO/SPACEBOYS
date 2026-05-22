@@ -1101,6 +1101,20 @@ footer { border-top: 1px solid var(--border); padding: 60px 48px 40px; backgroun
 }
 .video-card-body { padding: 16px; }
 .video-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--white); }
+.video-caption { font-size: 13px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+.video-card--featured { grid-column: 1 / -1; }
+.artist-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  background: #000;
+  object-fit: contain;
+}
+.merch-page-img img,
+.merch-img img {
+  object-fit: contain;
+  object-position: center;
+}
 
 .music-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .music-card {
