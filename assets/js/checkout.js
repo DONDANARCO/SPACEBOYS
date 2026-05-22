@@ -14,7 +14,7 @@ async function startCheckout(itemId, btn) {
   }
 
   try {
-    const res = await fanFetch("/api/stripe/checkout", {
+    const res = await fanFetch("/api/stripe-checkout", {
       method: "POST",
       body: JSON.stringify({ itemId, quantity: 1 }),
     });

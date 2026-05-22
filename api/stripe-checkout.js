@@ -1,6 +1,6 @@
-import { getMerchItem } from "../../lib/merchCatalog.js";
-import { getStripe, getSiteOrigin } from "../../lib/stripeClient.js";
-import { getFanUserIdFromRequest } from "../../lib/session.js";
+import { getMerchItem } from "../lib/merchCatalog.js";
+import { getStripe, getSiteOrigin } from "../lib/stripeClient.js";
+import { getFanUserIdFromRequest } from "../lib/session.js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -24,7 +24,6 @@ export default async function handler(req, res) {
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
-      customer_email: undefined,
       line_items: [
         {
           quantity: qty,
@@ -51,6 +50,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ url: session.url });
   } catch (err) {
     console.error("stripe checkout error:", err);
-    return res.status(500).json({ error: "Unable to start checkout" });
+    return res.status(500).json({ error: err.message?.includes("STRIPE") ? "Stripe is not configured" : "Unable to start checkout" });
   }
 }

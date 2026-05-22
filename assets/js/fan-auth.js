@@ -24,48 +24,63 @@ export async function fanFetch(url, options = {}) {
   });
 }
 
+async function parseFanResponse(res, fallbackError) {
+  let data = {};
+  try {
+    data = await res.json();
+  } catch {
+    if (res.status === 404) {
+      throw new Error("Fan sign-in API is not live yet. Redeploy the site on Vercel after the latest code push.");
+    }
+    throw new Error(fallbackError);
+  }
+  if (!res.ok) throw new Error(data.error || fallbackError);
+  return data;
+}
+
 export async function loadFanUser() {
-  const res = await fanFetch("/api/auth/me");
+  const res = await fanFetch("/api/fans/me");
   if (!res.ok) return null;
-  const data = await res.json();
+  const data = await parseFanResponse(res, "Not signed in");
   return data.user;
 }
 
 export async function fanSignup({ name, email, password }) {
-  const res = await fanFetch("/api/auth/signup", {
+  const res = await fanFetch("/api/fans/signup", {
     method: "POST",
     body: JSON.stringify({ name, email, password }),
   });
-  const data = await res.json();
-  if (!res.ok) throw new Error(data.error || "Signup failed");
+  const data = await parseFanResponse(res, "Signup failed");
   if (data.token) setFanToken(data.token);
   return data.user;
 }
 
 export async function fanLogin({ email, password }) {
-  const res = await fanFetch("/api/auth/login", {
+  const res = await fanFetch("/api/fans/login", {
     method: "POST",
     body: JSON.stringify({ email, password }),
   });
-  const data = await res.json();
-  if (!res.ok) throw new Error(data.error || "Login failed");
+  const data = await parseFanResponse(res, "Login failed");
   if (data.token) setFanToken(data.token);
   return data.user;
 }
 
 export async function fanLogout() {
-  await fanFetch("/api/auth/logout", { method: "POST" });
+  await fanFetch("/api/fans/logout", { method: "POST" });
   setFanToken(null);
 }
 
 export async function awardFanPoints(action) {
-  const res = await fanFetch("/api/points/award", {
+  const res = await fanFetch("/api/fans/points", {
     method: "POST",
     body: JSON.stringify({ action }),
   });
-  const data = await res.json();
   if (!res.ok) return null;
-  return data;
+  try {
+    return await res.json();
+  } catch {
+    return null;
+  }
 }
 
 export function updateNavFanState(user) {

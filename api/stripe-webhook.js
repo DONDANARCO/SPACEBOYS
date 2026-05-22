@@ -1,8 +1,8 @@
 import { PutCommand } from "@aws-sdk/lib-dynamodb";
-import { awardPoints } from "../../lib/fans.js";
-import { docClient, getPartitionKeyName, getSortKeyName, getTableName } from "../../lib/db.js";
-import { env } from "../../lib/env.js";
-import { getStripe } from "../../lib/stripeClient.js";
+import { awardPoints } from "../lib/fans.js";
+import { docClient, getPartitionKeyName, getSortKeyName, getTableName } from "../lib/db.js";
+import { env } from "../lib/env.js";
+import { getStripe } from "../lib/stripeClient.js";
 
 export const config = {
   api: {
