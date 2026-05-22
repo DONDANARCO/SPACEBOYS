@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Fan Hub — SPACEBOYS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="assets/images/Space%20boys/SPACEBOYS%20Landing%20page%20logo.jpeg" type="image/jpeg">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">SPACEBOYS</a>
+  <div class="nav-cta">
+    <a href="merchandise.html" class="btn btn-outline btn-sm">Shop Merch</a>
+    <button type="button" class="btn btn-ghost btn-sm" id="fanLogoutBtn">Sign Out</button>
+  </div>
+</nav>
+
+<main class="fan-dashboard">
+  <div class="fan-dashboard-header reveal">
+    <div class="section-tag">Fan Hub</div>
+    <h1 class="section-title">Your Space<br>Dashboard.</h1>
+    <p class="section-sub" id="fanWelcome">Loading your profile…</p>
+  </div>
+
+  <div class="fan-stats-grid reveal">
+    <div class="fan-stat-card fan-stat-card--points">
+      <div class="fan-stat-label">Loyalty Points</div>
+      <div class="fan-stat-value" id="fanPoints">—</div>
+      <div class="fan-stat-hint" id="fanPointsHint"></div>
+    </div>
+    <div class="fan-stat-card">
+      <div class="fan-stat-label">Tier Status</div>
+      <div class="fan-stat-value fan-stat-value--sm" id="fanTier">—</div>
+      <div class="fan-stat-hint" id="fanTierHint">250+ points unlocks Super Fan rewards</div>
+    </div>
+    <div class="fan-stat-card">
+      <div class="fan-stat-label">Referral Code</div>
+      <div class="fan-stat-value fan-stat-value--sm" id="fanReferral">—</div>
+      <button type="button" class="btn btn-ghost btn-sm" id="copyReferral">Copy Code</button>
+    </div>
+  </div>
+
+  <section class="fan-section reveal">
+    <h2 class="fan-section-title">Earn Points</h2>
+    <ul class="fan-earn-list">
+      <li><strong>+50</strong> Create your fan account</li>
+      <li><strong>+30</strong> RSVP to Introduction to Space Fest</li>
+      <li><strong>+100</strong> Buy official merch (Stripe checkout)</li>
+      <li><strong>+10</strong> Daily site visit</li>
+      <li><strong>+5</strong> Explore the community gallery</li>
+      <li><strong>+5</strong> Visit our social links</li>
+    </ul>
+  </section>
+
+  <section class="fan-section reveal">
+    <h2 class="fan-section-title">Coming Soon</h2>
+    <div class="fan-coming-grid">
+      <div class="fan-coming-card"><span>Digital tickets</span></div>
+      <div class="fan-coming-card"><span>Merch discounts</span></div>
+      <div class="fan-coming-card"><span>Exclusive music drops</span></div>
+      <div class="fan-coming-card"><span>48h Super Fan early access</span></div>
+    </div>
+  </section>
+
+  <div class="fan-actions reveal">
+    <a href="index.html#shows" class="btn btn-primary">RSVP — Space Fest</a>
+    <a href="merchandise.html" class="btn btn-outline">Shop Merch</a>
+    <a href="community.html" class="btn btn-ghost">Community Gallery</a>
+  </div>
+</main>
+
+<script type="module" src="assets/js/fan-dashboard-page.js"></script>
+</body>
+</html>

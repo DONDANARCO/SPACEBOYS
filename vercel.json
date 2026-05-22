@@ -11,7 +11,11 @@
     { "source": "/artists/kayson-woods", "destination": "/artists/kayson-woods.html" },
     { "source": "/artists/kelly-price", "destination": "/artists/kelly-price.html" },
     { "source": "/artists/jiggy-jamal", "destination": "/artists/jiggy-jamal.html" },
-    { "source": "/admin", "destination": "/admin.html" }
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/fan-dashboard", "destination": "/fan-dashboard.html" },
+    { "source": "/checkout-success", "destination": "/checkout-success.html" },
+    { "source": "/checkout-cancel", "destination": "/checkout-cancel.html" }
   ],
   "headers": [
     {

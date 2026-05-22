@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Official SPACEBOYS merchandise — hoodies, tees, and caps.">
+<meta name="description" content="Official SPACEBOYS merchandise — hoodies, tees, and caps. Secure Stripe checkout.">
 <title>Merchandise — SPACEBOYS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
   <a href="index.html#about" onclick="closeMobileNav()">About</a>
   <a href="index.html#artists" onclick="closeMobileNav()">Artists</a>
   <a href="merchandise.html" onclick="closeMobileNav()">Merch</a>
+  <a href="fan-dashboard.html" onclick="closeMobileNav()">Fan Hub</a>
   <a href="community.html" onclick="closeMobileNav()">Community</a>
   <a href="index.html#contact" onclick="closeMobileNav()">Contact</a>
 </div>
@@ -25,13 +26,14 @@
   <ul class="nav-links">
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#artists">Artists</a></li>
-    <li><a href="index.html#services">Studio</a></li>
     <li><a href="merchandise.html" class="active">Merch</a></li>
+    <li><a href="fan-dashboard.html">Fan Hub</a></li>
     <li><a href="community.html">Community</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
   <div class="nav-cta">
-    <a href="index.html#contact" class="btn btn-primary btn-sm">Order Inquiry</a>
+    <a href="login.html" class="btn btn-ghost btn-sm" id="navFanSignIn">Sign In</a>
+    <a href="fan-dashboard.html" class="btn btn-outline btn-sm" id="navFanHub" hidden>Fan Hub</a>
     <button class="menu-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -42,57 +44,57 @@
     <p class="breadcrumb"><a href="index.html">Home</a> / Merchandise</p>
     <div class="section-tag">Shop</div>
     <h1 class="page-hero-title">SPACEBOYS<br>Gear.</h1>
-    <p class="page-hero-sub">Wear the movement. Limited drops, exclusive collections, and artist collaborations — rep SPACEBOYS records wherever you go.</p>
+    <p class="page-hero-sub">Secure checkout with Stripe. Sign in to earn <strong>+100 fan points</strong> on every merch order.</p>
   </div>
 </section>
 
 <section style="padding-top:60px;">
   <div class="merch-page-grid reveal">
 
-    <article class="merch-page-card">
+    <article class="merch-page-card" data-merch-index="0">
       <div class="merch-page-img">
-        <img src="assets/images/Merch/Hoodie.jpg" alt="SPACEBOYS hoodie" loading="lazy" decoding="async" width="600" height="750">
+        <img src="assets/images/Merch/Hoodie.jpg" alt="SPACEBOYS hoodie" data-merch-image loading="lazy" decoding="async">
         <span class="merch-img-label">HOODIE</span><span class="merch-badge">New</span>
       </div>
       <div class="merch-page-body">
-        <div class="merch-page-name">SPACEBOYS Hoodie</div>
-        <div class="merch-type">Hoodies</div>
-        <p class="merch-page-desc">Premium heavyweight hoodie with embroidered SPACEBOYS logo. Purple accent stitching. Unisex fit.</p>
+        <div class="merch-page-name" data-merch-name>SPACEBOYS Hoodie</div>
+        <div class="merch-type" data-merch-type>Hoodies</div>
+        <p class="merch-page-desc" data-merch-desc>Premium heavyweight hoodie with embroidered SPACEBOYS logo. Purple accent stitching. Unisex fit.</p>
         <div class="merch-footer">
-          <div class="merch-price">R 750</div>
-          <a href="index.html#contact" class="btn btn-primary btn-sm">Order</a>
+          <div class="merch-price" data-merch-price>R 750</div>
+          <button type="button" class="btn btn-primary btn-sm" data-checkout="hoodie">Buy Now</button>
         </div>
       </div>
     </article>
 
-    <article class="merch-page-card">
+    <article class="merch-page-card" data-merch-index="1">
       <div class="merch-page-img">
-        <img src="assets/images/Merch/tee2.webp" alt="SPACEBOYS tee" loading="lazy" decoding="async" width="600" height="750">
+        <img src="assets/images/Merch/tee2.webp" alt="SPACEBOYS tee" data-merch-image loading="lazy" decoding="async">
         <span class="merch-img-label">TEE</span>
       </div>
       <div class="merch-page-body">
-        <div class="merch-page-name">Classic Tee</div>
-        <div class="merch-type">T-Shirts</div>
-        <p class="merch-page-desc">Soft cotton tee — Float Or Forever Stay Grounded print on back. Available in black and white.</p>
+        <div class="merch-page-name" data-merch-name>Classic Tee</div>
+        <div class="merch-type" data-merch-type>T-Shirts</div>
+        <p class="merch-page-desc" data-merch-desc>Soft cotton tee — Float Or Forever Stay Grounded print on back. Available in black and white.</p>
         <div class="merch-footer">
-          <div class="merch-price">R 350</div>
-          <a href="index.html#contact" class="btn btn-primary btn-sm">Order</a>
+          <div class="merch-price" data-merch-price>R 350</div>
+          <button type="button" class="btn btn-primary btn-sm" data-checkout="tee">Buy Now</button>
         </div>
       </div>
     </article>
 
-    <article class="merch-page-card">
+    <article class="merch-page-card" data-merch-index="2">
       <div class="merch-page-img">
-        <img src="assets/images/Merch/caps.webp" alt="SPACEBOYS cap" loading="lazy" decoding="async" width="600" height="750">
+        <img src="assets/images/Merch/caps.webp" alt="SPACEBOYS cap" data-merch-image loading="lazy" decoding="async">
         <span class="merch-img-label">CAP</span><span class="merch-badge">Limited</span>
       </div>
       <div class="merch-page-body">
-        <div class="merch-page-name">SPCBYS Cap</div>
-        <div class="merch-type">Hats</div>
-        <p class="merch-page-desc">Structured cap with tonal embroidery. Limited run — once they're gone, they're gone.</p>
+        <div class="merch-page-name" data-merch-name>SPCBYS Cap</div>
+        <div class="merch-type" data-merch-type>Hats</div>
+        <p class="merch-page-desc" data-merch-desc>Structured cap with tonal embroidery. Limited run — once they're gone, they're gone.</p>
         <div class="merch-footer">
-          <div class="merch-price">R 280</div>
-          <a href="index.html#contact" class="btn btn-primary btn-sm">Order</a>
+          <div class="merch-price" data-merch-price>R 280</div>
+          <button type="button" class="btn btn-primary btn-sm" data-checkout="cap">Buy Now</button>
         </div>
       </div>
     </article>
@@ -100,8 +102,8 @@
   </div>
 
   <div style="margin-top:64px;text-align:center;" class="reveal">
-    <p style="color:var(--text-dim);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto;">For bulk orders, artist collab merch, or custom sizing — reach out to the team.</p>
-    <a href="index.html#contact" class="btn btn-primary">Contact Merch Team</a>
+    <p style="color:var(--text-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;">Sign in before checkout to link your order and earn loyalty points. Payments are processed securely by Stripe.</p>
+    <a href="login.html?redirect=merchandise.html" class="btn btn-outline">Create Fan Account</a>
   </div>
 </section>
 
@@ -118,5 +120,8 @@
 
 <script src="assets/js/analytics.js" defer></script>
 <script src="assets/js/main.js"></script>
+<script type="module" src="assets/js/fan-auth.js"></script>
+<script type="module" src="assets/js/site-content.js"></script>
+<script type="module" src="assets/js/checkout.js"></script>
 </body>
 </html>

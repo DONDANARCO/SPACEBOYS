@@ -121,6 +121,7 @@ function showToast(msg) {
 async function postJson(url, data) {
   const res = await fetch(url, {
     method: 'POST',
+    credentials: 'include',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   });
@@ -173,12 +174,14 @@ async function handleRsvp(e) {
   if (!name || !email) return;
 
   try {
-    await postJson('/api/rsvp', {
+    const data = await postJson('/api/rsvp', {
       name,
       email,
       event: form.dataset.event || 'introduction-to-space-fest-2026',
     });
-    showToast('★ You\'re on the list for Introduction to Space Fest!');
+    let msg = '★ You\'re on the list for Introduction to Space Fest!';
+    if (data.pointsAwarded) msg += ` +${data.pointsAwarded} fan points.`;
+    showToast(msg);
     form.reset();
     closeRsvpModal();
   } catch {

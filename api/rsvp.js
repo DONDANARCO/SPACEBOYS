@@ -1,5 +1,7 @@
 import { PutCommand } from "@aws-sdk/lib-dynamodb";
+import { awardPoints } from "../lib/fans.js";
 import { buildItem, docClient, getTableName } from "../lib/db.js";
+import { getFanUserIdFromRequest } from "../lib/session.js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -24,7 +26,14 @@ export default async function handler(req, res) {
       })
     );
 
-    return res.status(200).json({ ok: true });
+    let pointsAwarded = 0;
+    const userId = getFanUserIdFromRequest(req);
+    if (userId) {
+      const result = await awardPoints(userId, "rsvp");
+      pointsAwarded = result.awarded || 0;
+    }
+
+    return res.status(200).json({ ok: true, pointsAwarded });
   } catch (err) {
     console.error("rsvp API error:", err);
     return res.status(500).json({ error: "Unable to save RSVP" });
